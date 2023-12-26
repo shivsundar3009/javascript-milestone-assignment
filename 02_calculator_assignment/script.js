@@ -4,34 +4,30 @@ const secondValue = document.getElementById('secondValue')
 
 const operatorValue = document.getElementById('operatorValue')
 
-
 const btn = document.getElementById('btn')
 
+const result = document.getElementById('result')
+
 btn.addEventListener('click',()=>{
-    console.log(firstValue.value);
-    console.log(secondValue.value);
     
     switch(operatorValue.value){
         case "+":
-            console.log("addition");
+            result.innerText = "Result is : "; Number(firstValue.value) + Number(secondValue.value);
             break;
         case "-":
-            console.log('minus');
+            result.innerText = "Result is : "; Number(firstValue.value) - Number(secondValue.value);
             break;
         case "*":
-            console.log('multiply');
+            result.innerText = "Result is : "; Number(firstValue.value) * Number(secondValue.value);
             break;
         case "/":
-            console.log('division');
+            result.innerText = "Result is : "; Number(firstValue.value) / Number(secondValue.value);
             break;
         
         default:
-            console.log('error');  
+            console.log('Please enter correct operator');  
             break;  
     }
-    if(operatorValue.value === "+"){
-        console.log(Number(firstValue.value) + Number(secondValue.value));
-    }
-    // console.log(Number(firstValue.value) + Number(operatorValue.value) + Number(secondValue.value));
+
 })
 
