@@ -1,17 +1,25 @@
 body{
+    background-color: #ff006e;
     display: flex;
 height: 70vh;
   justify-content: center;
   align-items: center;
 }
-
+.color-mixer{
+ padding: 40px;
+    background-color: #e9d8a6;
+}
 .field{
     flex-direction: column;
     display: flex;
     gap: 5px;
 }
-.btn{
+.btn,.btnClear{
     cursor: pointer;
     padding: 4px 15px 4px 15px;
 
+}
+.btnDiv{
+    display: flex;
+    gap: 5px;
 }
