@@ -39,11 +39,22 @@
   .btn:hover{
     cursor: pointer;
   }
-  .todo-list{
-    display: flex;
-  }
-  .todo-list-div{
+  li{
+    padding: 2vh 1vw;
+    width: max-content;
     background-color: red;
+  }
+  .todo-list{
+    justify-content: center;
+    font-weight: bold;
+    gap: 3vh;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .todo-list-div{
+   
     width: 40vw;
     display: flex;
   }
@@ -64,7 +75,10 @@
 
             <div class="todo-list-div">
 
-                <div class="todo-list">
+                <div class="">
+                  <ul class="todo-list">
+
+                  </ul>
         
                 </div>
 
@@ -88,19 +102,24 @@ let todoListRef = document.querySelector('.todo-list')
 let todo
 
 btn.addEventListener('click', () => {
+
     
     todo = inputFieldValue.value
 
     console.log(todo)
     
-    let todoItem = document.createElement('p')
+    let todoItem = document.createElement('li')
 
-    todoItem.innerText = todo
+    todoItem.innerHTML = "<input type ='checkbox' class = 'checkbox' /> "  + todo
 
     console.log(todoItem)
 
     todoListRef.appendChild(todoItem)
     
+})
+
+onchange('input',() => {
+  console.log(checked);
 })
 
 </script>
